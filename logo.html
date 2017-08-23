@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Logo</title>
+	<style>
+		body{
+			display:flex;
+			align-items:center;
+			height:100vh;
+			justify-contnet:center;
+			background-color: black;
+		}
+		.platzi{
+			width:100px;
+			height:100px;
+			position:relative;
+			margin:40px auto;
+			/*background-color: red;*/
+			transform:rotate(45deg);
+			
+			animation-name: platzi-base;
+			animation-duration:3.5s;
+			animation-iteration-count:infinite;
+
+		}
+
+		.platzi-left{
+			width:100%;
+			height:65%;
+			border:20px solid purple;
+			border-radius:20px 20px 0 0;
+			border-bottom:none;
+			position: relative;
+			top:1px;
+			/*va a tomar en cuenta su borde*/
+			box-sizing:border-box;
+
+			animation-name: platzi-left;
+			animation-duration:3.5s;
+			animation-iteration-count:infinite;
+			amimation-delay:1s;
+		
+		}
+
+		.platzi-right{
+			width:100%;
+			height:35%;	
+			border:20px solid purple;
+			border-radius:0 0 20px 20px;
+			border-top:none;
+			/*va a tomar en cuenta su borde*/
+			box-sizing:border-box;
+		}
+
+
+		@keyframes platzi-base{
+			0%{
+				opacity:0;
+				transform: scale(.3) rotate(0deg);
+
+			}
+			30%{
+				opacity:1;
+				transform: scale(.8) rotate(405deg);
+			}
+			80%{
+				opacity:1;
+				transform: scale(.8) rotate(405deg);
+			}
+			100%{
+				opacity:0;
+				transform: scale(.3) rotate(0deg);
+			}
+		}
+
+		@keyframes platzi-left{
+			0%{
+				width:100%;
+			}
+			30%{
+				width:100%;
+			}
+		/*	50%{
+				width:100%;	
+			}*/
+			80%{
+				width:80%;
+			}
+			100%{
+				width:100%;	
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="platzi">
+		<div class="platzi-left"></div>
+		<div class="platzi-right"></div>
+	</div>
+</body>
+</html>

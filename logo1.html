@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Logo</title>
+	<style>
+		body{
+			display:flex;
+			align-items:center;
+			height:100vh;
+			justify-contnet:center;
+			background-color: white;
+		}
+		.logo{
+			text-align: center;
+			font-color:white; 
+			content: ARA;
+			width:100px;
+			height:100px;
+			position:relative;
+			margin:40px auto;
+			/*background-color: red;*/
+			transform:rotate(45deg);
+			
+			animation-name: logo-base;
+			animation-duration:3.5s;
+			animation-iteration-count:infinite;
+
+		}
+			
+		.logo p {
+		    margin: 0px;
+		    color: #00235A;
+		    font-weight: bold;
+		    display: flex;
+		    align-items: center;
+		    justify-contnet: center;
+		    position: relative;
+	        left: 17%;
+		    top: 45%;
+		    font-size: 24px;
+		    transform: rotate(-45deg);
+		}
+		.logo-left{
+			width:100%;
+			height:65%;
+			border:20px solid #B92D28;
+			border-radius:5px 5px 0 0;
+			border-bottom:none;
+			position: relative;
+			top:1px;
+			/*va a tomar en cuenta su borde*/
+			box-sizing:border-box;
+
+			animation-name: logo-left;
+			animation-duration:3.5s;
+			animation-iteration-count:infinite;
+			amimation-delay:1s;
+		
+		}
+
+		.logo-right{
+			width:100%;
+			height:35%;	
+			border:20px solid #B92D28;
+			border-radius:0 0 5px 5px;
+			border-top:none;
+			/*va a tomar en cuenta su borde*/
+			box-sizing:border-box;
+		}
+
+
+		@keyframes logo-base{
+			0%{
+				opacity:0;
+				transform: scale(.3) rotate(0deg);
+
+			}
+			30%{
+				opacity:1;
+				transform: scale(.8) rotate(405deg);
+			}
+			80%{
+				opacity:1;
+				transform: scale(.8) rotate(405deg);
+			}
+			100%{
+				opacity:0;
+				transform: scale(.3) rotate(0deg);
+			}
+		}
+
+		@keyframes logo-left{
+			0%{
+				width:100%;
+			}
+			30%{
+				width:100%;
+			}
+		/*	50%{
+				width:100%;	
+			}*/
+			80%{
+				width:100%;
+			}
+			100%{
+				width:100%;	
+			}
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="logo">
+		<p>ARA</p>
+		<div class="logo-left"></div>
+		<div class="logo-right"></div>
+	</div>
+</body>
+</html>
